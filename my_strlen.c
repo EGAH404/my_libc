@@ -2,14 +2,17 @@
 
 size_t
 my_strlen(const char *s)
+
+{size_t len = 0;
+	while (s[len] != '\0')
+{len++;}
+
+return len;}
+
+int
+main(void)
 {
-        size_t len = 0;
-
-        while (s[len] != '\0') {
-                len++;
-        }
-
-        return len;
+        return my_strlen("Hello World!") - 12;
 }
 
 //1er code et j'ai deja mal au fesse
