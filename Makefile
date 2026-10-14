@@ -1,3 +1,4 @@
+
 NAME = my_libc.a
 
 CC = cc
