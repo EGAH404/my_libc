@@ -11,8 +11,4 @@ my_strcpy(char *dst, const char *src)
 	}
 	dst[i] = '\0';
 	return dst;
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 80b33a4 (Sauvegarde my_libc)
