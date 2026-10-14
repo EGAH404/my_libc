@@ -4,5 +4,7 @@
 #include <stddef.h>
 
 size_t my_strlen(const char *s);
+char *my_strcpy(char *dst, const char *src);
 
 #endif /* MY_LIBC_H */
+
