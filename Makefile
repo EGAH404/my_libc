@@ -7,7 +7,7 @@ AR = ar
 ARFLAGS = rcs
 RM = rm -f
 
-SRCS = my_strlen.c my_strcpy.c
+SRCS = my_strlen.c my_strcpy.c my_strncpy.c
 HDRS = my_libc.h
 
 OBJS = $(SRCS:.c=.o)
