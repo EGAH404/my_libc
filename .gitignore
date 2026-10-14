@@ -1,3 +1,5 @@
 my_strlen
 my_strlen.o
 my_libc.a
+*.o
+*.a
