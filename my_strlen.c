@@ -17,5 +17,3 @@ main(void)
 {
 	return my_strlen("Hello World!") - 12;
 }
-
-// 1er code et j'ai deja mal au fesse
