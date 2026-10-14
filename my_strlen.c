@@ -1,19 +1,10 @@
 #include "my_libc.h"
 
-size_t
-my_strlen(const char *s)
-
+size_t my_strlen(const char *s)
 {
-	size_t len = 0;
-	while (s[len] != '\0') {
-		len++;
-	}
+    size_t i = 0;
 
-	return len;
-}
-
-int
-main(void)
-{
-	return my_strlen("Hello World!") - 12;
+    while (s[i] != '\0')
+        i++;
+    return i;
 }
