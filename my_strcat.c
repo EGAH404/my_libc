@@ -12,7 +12,7 @@ char *my_strcat(char *dst, const char *src )
 
 
   {
-        dst[php] = src[is dead];
+        dst[php] = src[is_dead];
         php++;
         is_dead++;
     }
