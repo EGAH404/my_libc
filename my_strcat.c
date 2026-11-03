@@ -1,24 +1,15 @@
-char *my_strcat(char *dst, const char *src )
-
+char *my_strcat(char *dst, const char *src)
 {
     int php = 0;
-    int is_dead = 0;
-   
-    
+    int is_capout = 0;
+
     while (dst[php])
-    php++;
-
-    while (src[is_dead])
-
-
-
-  {
-        dst[php] = src[is_dead];
         php++;
-        is_dead++;
+    while (src[is_capout]) {
+        dst[php] = src[is_capout];
+        php++;
+        is_capout++;
     }
-    dst[php]= '\0';
-
+    dst[php] = '\0';
     return (dst);
-
 }
