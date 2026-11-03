@@ -1,4 +1,3 @@
-
 NAME = my_libc.a
 
 CC = cc
@@ -7,7 +6,7 @@ AR = ar
 ARFLAGS = rcs
 RM = rm -f
 
-SRCS = my_strlen.c my_strcpy.c my_strncpy.c
+SRCS = my_strlen.c my_strcpy.c my_strncpy.c my_strcat.c
 HDRS = my_libc.h
 
 OBJS = $(SRCS:.c=.o)
