@@ -1,8 +1,8 @@
 char *my_strcat(char *dst, const char *src )
 
 {
-    int php = 0
-    int is_dead = 0
+    int php = 0;
+    int is_dead = 0;
 
     while (dst[php])
     php++;
