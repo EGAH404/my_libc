@@ -1,3 +1,5 @@
+#include <stddef.h>
+
 char *
 my_strncat(char *dst, const char *src, size_t n)
 {
