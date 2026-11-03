@@ -7,7 +7,7 @@ char *my_strcat(char *dst, const char *src )
     while (dst[php])
     php++;
 
-    while (dst[is_dead])
+    while (src[is_dead])
 
 
 
