@@ -1,3 +1,5 @@
+#include "my_libc.h"
+
 int
 my_strcmp(const char *s1, const char *s2)
 {
