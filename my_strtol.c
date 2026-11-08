@@ -36,26 +36,33 @@ my_strtol(const char *nptr, char **endptr, int base)
 		return (0);
 	}
 	if (base == 0) {
-		if (*nptr == '0' && (nptr[1] == 'x' || nptr[1] == 'X'))
-			base = 16;
-		else if (*nptr == '0')
-			base = 8;
-		else
+		if (*nptr == '0') {
+			if (nptr[1] == 'x' || nptr[1] == 'X')
+				base = 16;
+			else
+				base = 8;
+		} else {
 			base = 10;
+		}
 	}
-	if (base == 16 && *nptr == '0'
-		&& (nptr[1] == 'x' || nptr[1] == 'X'))
-		nptr += 2;
+	if (base == 16 && *nptr == '0') {
+		if (nptr[1] == 'x' || nptr[1] == 'X')
+			nptr += 2;
+	}
 	const char *start = nptr;
 	while ((digit = char_to_digit(*nptr)) >= 0 && digit < base) {
 		if (!overflow) {
-			if (sign == 1
-				&& (result > (LONG_MAX - digit) / base))
-				overflow = 1;
-			else if (sign == -1
-				&& (-result < (LONG_MIN + digit) / base))
-				overflow = 1;
-			else
+			long cutoff;
+			if (sign == 1) {
+				cutoff = (LONG_MAX - digit) / base;
+				if (result > cutoff)
+					overflow = 1;
+			} else {
+				cutoff = (LONG_MIN + digit) / base;
+				if (-result < cutoff)
+					overflow = 1;
+			}
+			if (!overflow)
 				result = result * base + digit;
 		}
 		nptr++;
